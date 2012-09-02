@@ -839,8 +839,8 @@ Text = {
 };
 
 SFX = {
-  laser:     new Audio('39459__THE_bizniss__laser.wav'),
-  explosion: new Audio('51467__smcameron__missile_explosion.wav')
+  laser:     new Audio('static/39459__THE_bizniss__laser.wav'),
+  explosion: new Audio('static/51467__smcameron__missile_explosion.wav')
 };
 
 // preload audio
