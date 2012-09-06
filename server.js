@@ -21,5 +21,9 @@ var nowjs = require("now");
 var everyone = nowjs.initialize(server);
 
 everyone.now.distributeMessage = function(message){
-    console.log(this.now.name+':'+message);
+    console.log(
+      message.current_key + ',' +
+      message.time_stamp + ',' +
+      message.event
+    );
 };

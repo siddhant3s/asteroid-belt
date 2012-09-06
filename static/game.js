@@ -26,12 +26,22 @@ $(window).keydown(function (e) {
   if (KEY_CODES[e.keyCode]) {
     e.preventDefault();
     KEY_STATUS[KEY_CODES[e.keyCode]] = true;
+    now.distributeMessage({
+      'current_key' : e.keyCode,
+      'time_stamp' : (+ new Date()),
+      'event' : 'keydown'
+    });
   }
 }).keyup(function (e) {
   KEY_STATUS.keyDown = false;
   if (KEY_CODES[e.keyCode]) {
     e.preventDefault();
     KEY_STATUS[KEY_CODES[e.keyCode]] = false;
+    now.distributeMessage({
+      'current_key' : e.keyCode,
+      'time_stamp' : (+ new Date()),
+      'event' : 'keyup'
+    });
   }
 });
 
